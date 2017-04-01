@@ -1,5 +1,6 @@
 class ReferencesController < ApplicationController
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
+  before_action :set_entry_types_for_template, only: [:new, :edit, :create]
 
   # GET /references
   # GET /references.json
@@ -71,4 +72,9 @@ class ReferencesController < ApplicationController
     def reference_params
       params.require(:reference).permit(:key, :entry_type, :author, :title, :journal, :year, :volume, :number, :pages, :month, :note, :publisher, :series, :address, :edition, :booktitle, :editor, :organization)
     end
+
+    def set_entry_types_for_template
+      @entry_type = ["article", "book", "inproceedings"]
+    end
+
 end
