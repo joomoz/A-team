@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401082846) do
+ActiveRecord::Schema.define(version: 20170401101334) do
 
   create_table "references", force: :cascade do |t|
     t.string   "key"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170401082846) do
     t.text     "organization"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "entry_type"
   end
 
 end

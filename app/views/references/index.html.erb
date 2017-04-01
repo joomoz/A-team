@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Key</th>
+      <th>Entry Type</th>
       <th>Author</th>
       <th>Title</th>
       <th>Journal</th>
@@ -30,6 +31,7 @@
     <% @references.each do |reference| %>
       <tr>
         <td><%= link_to reference.key, reference %></td>
+        <td><%= reference.entry_type %></td>
         <td><%= reference.author %></td>
         <td><%= reference.title %></td>
         <td><%= reference.journal %></td>
