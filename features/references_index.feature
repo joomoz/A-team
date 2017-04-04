@@ -1,5 +1,10 @@
-Feature: User can see references on the references index page
+Feature: User can see a list of references
 
-Scenario: User can see references on the references index page
-Given: User goes to the index reference page
-Then: Page contains message "Listing References"
+  Scenario: User can see references index page
+    When: User goes to the index reference page
+    Then: Page confirms it
+
+  Scenario: User can see a single reference on references index page
+    When: User goes to the index reference page
+    Then: Page contains one article
+
