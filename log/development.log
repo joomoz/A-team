@@ -1456,3 +1456,26 @@ Processing by ReferencesController#new as HTML
   Rendered references/new.html.erb within layouts/application (25.9ms)
 Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.0ms)
 >>>>>>> cff4d81b6783cb2de7f8f57f4e19798b4c79fe0d
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-05 19:13:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 199ms (Views: 191.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-05 19:32:23 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-05 19:50:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 181ms (Views: 173.3ms | ActiveRecord: 0.3ms)

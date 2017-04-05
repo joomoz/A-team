@@ -1,9 +1,16 @@
 language: ruby
 rvm:
- - 2.3.0
+- 2.3.0
 script:
- - bundle exec rake db:migrate --trace
- - RAILS_ENV=test bundle exec rake db:migrate --trace
-# - bundle exec rake db:test:prepare
-# Set up Cucumber tests first!
-# - bundle exec rspec -fd spec/
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+#Add tests!
+#- bundle exec cucumber features
+deploy:
+  provider: heroku
+  api_key:
+    secure: FtKo6l3l+KzMQvAU/6acE0BLvOjOIXNmAsLh+TCcBYEUumFGG5eRKKaEaTOlEnmT8pSHN1hwgkvXGvh0XS/Vf6Kp+iPwnlj9NSqbG7MLritAPWmynwVr/NlzCs1hVDCwsCR2P83MFSWh0RCLJMnzog8grSilN3S5ilMGMKCSB/jxwuvkoBC05iyGCF9UKactUXvoYAFzLBxGBY1Wpr9EFLDnZaYk5f4GsMxH/hskMdqj7bsnXLfks64olLtwLdO8csOderJW7JvxrZps+sm/wFEfkgATpKTm2/fxGzmDlTuMW5UmENRKTKuVNlkWIQIVZdc9M6RlDue2K8785YlRITIyYENWgW1SsPuzrLcwdpldUOygB5cpVtSDuIyzz6RUyxlbLrddhRQImWxrgD3SosGMSVegzxl/NdjgEU6YblVggRP0jZrjLbETo71TkNfE7i13FniWAo3je0kj0V2C/hQUzeqRYMwZWT9a0CuGyUm1v6XV6QdTHDwU5fKSRkUzT6G0zd/qC93SSJLkhCMj289d2ya1B/L/t8rdnnJoBQKEG3xeqVFaI0GpgULXtSaGNsAwEl4fiquHklmDzG3Dig5dUqlJVhHIxRC6NcslNeadgN9zzwGzD+7gOjyAUUX/LZMNLhTxqFpQVJZsLHODA/vW7Y9ej6xEEe51vMd7a3w=
+  app: ateam-bibtex-generator
+  on:
+    repo: joomoz/A-team

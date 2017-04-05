@@ -7,4 +7,3 @@ Scenario: User can add an article reference to the system
     And User fills Author: Moilanen J.
     When User clicks Create Reference
     Then Page confirms it
-
