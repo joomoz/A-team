@@ -35,6 +35,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Ruby version
 ruby '2.3.0'
 
+gem 'coveralls', require: false
+
+group :test do
+  gem 'simplecov', require: false
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

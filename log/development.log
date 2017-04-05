@@ -1291,3 +1291,27 @@ Processing by ReferencesController#index as HTML
   [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references"
   Rendered references/index.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-05 17:29:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 182ms (Views: 174.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/references.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-04-05 17:29:32 +0300
+
+
+Started GET "/assets/scaffolds.self-ccd1ee239adb14fcdb628318e8b4545c2655951dce60f5575b42e8fdfd3859a5.css?body=1" for 127.0.0.1 at 2017-04-05 17:29:32 +0300
+
+
+Started GET "/assets/references.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-04-05 17:29:32 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-05 18:58:10 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.1ms)
