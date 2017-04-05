@@ -1291,3 +1291,143 @@ Processing by ReferencesController#index as HTML
   [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references"
   Rendered references/index.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-04-05 13:39:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.3ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 1113ms (Views: 1096.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/assets/scaffolds.self-5a3373a8a8d495b69cf001a8f949e5f62dc02b9a20d3d6efc161c1da43041a60.css?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/assets/references.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/assets/references.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-04-05 13:39:20 +0300
+
+
+Started GET "/references/new" for ::1 at 2017-04-05 13:39:23 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/_form.html.erb (35.6ms)
+  Rendered references/new.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 66ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/references" for ::1 at 2017-04-05 13:40:02 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yKpkchHh/dqO71FRaANKFsfnKOmgvRBXoaRuz3JRSFuJfLr8MCBgZ//qkm6IHnb/Kf7U7mb7TcINWW8e+GBnNw==", "reference"=>{"key"=>"k", "entry_type"=>"article", "author"=>"Markoolio", "title"=>"Jiggy", "journal"=>"Journal", "year"=>"2001", "volume"=>"1", "number"=>"", "pages"=>"11-12", "month"=>"", "note"=>"", "publisher"=>"", "series"=>"", "address"=>"", "edition"=>"", "booktitle"=>"", "editor"=>"", "organization"=>""}, "commit"=>"Create Reference"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "references" ("key", "entry_type", "author", "title", "journal", "year", "volume", "pages", "note", "publisher", "series", "address", "edition", "booktitle", "editor", "organization", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["key", "k"], ["entry_type", "article"], ["author", "Markoolio"], ["title", "Jiggy"], ["journal", "Journal"], ["year", 2001], ["volume", 1], ["pages", "11-12"], ["note", ""], ["publisher", ""], ["series", ""], ["address", ""], ["edition", ""], ["booktitle", ""], ["editor", ""], ["organization", ""], ["created_at", "2017-04-05 10:40:02.195816"], ["updated_at", "2017-04-05 10:40:02.195816"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/references/4
+Completed 302 Found in 12ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/references/4" for ::1 at 2017-04-05 13:40:02 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mReference Load (0.2ms)[0m  SELECT  "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered references/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/references" for ::1 at 2017-04-05 13:40:06 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.3ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references/4" for ::1 at 2017-04-05 13:40:18 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mReference Load (0.3ms)[0m  SELECT  "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered references/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-05 17:28:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 356ms (Views: 341.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-04-05 17:28:49 +0300
+
+
+Started GET "/assets/references.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-05 17:28:49 +0300
+
+
+Started GET "/references/new" for ::1 at 2017-04-05 17:30:15 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/_form.html.erb (38.9ms)
+  Rendered references/new.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 89ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/references" for ::1 at 2017-04-05 17:31:06 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8bLeKqpTEw+KTGow5AFo4n8CTw85yIMvImsUfJp2o8ewZACki5KOsvtJqQ8EHFQLkRuzCP+O3rqOlhWtEEeMqw==", "reference"=>{"key"=>"ää", "entry_type"=>"article", "author"=>"Mikkä Äikkä", "title"=>"Äääkköset", "journal"=>"Äidinkieli", "year"=>"2012", "volume"=>"1", "number"=>"", "pages"=>"12a", "month"=>"", "note"=>"", "publisher"=>"", "series"=>"", "address"=>"", "edition"=>"Ääääää", "booktitle"=>"", "editor"=>"", "organization"=>""}, "commit"=>"Create Reference"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "references" ("key", "entry_type", "author", "title", "journal", "year", "volume", "pages", "note", "publisher", "series", "address", "edition", "booktitle", "editor", "organization", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["key", "ää"], ["entry_type", "article"], ["author", "Mikkä Äikkä"], ["title", "Äääkköset"], ["journal", "Äidinkieli"], ["year", 2012], ["volume", 1], ["pages", "12a"], ["note", ""], ["publisher", ""], ["series", ""], ["address", ""], ["edition", "Ääääää"], ["booktitle", ""], ["editor", ""], ["organization", ""], ["created_at", "2017-04-05 14:31:06.230984"], ["updated_at", "2017-04-05 14:31:06.230984"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/references/5
+Completed 302 Found in 33ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/references/5" for ::1 at 2017-04-05 17:31:06 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mReference Load (0.6ms)[0m  SELECT  "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered references/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/references" for ::1 at 2017-04-05 17:31:10 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.3ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references/5" for ::1 at 2017-04-05 17:31:17 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mReference Load (0.2ms)[0m  SELECT  "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered references/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/references" for ::1 at 2017-04-05 18:11:28 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (1.2ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 60ms (Views: 53.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/references/new" for ::1 at 2017-04-05 18:11:30 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/_form.html.erb (23.7ms)
+  Rendered references/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.0ms)
