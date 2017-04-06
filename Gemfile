@@ -35,10 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Ruby version
 ruby '2.3.0'
 
-gem 'coveralls', require: false
-
 group :test do
   gem 'simplecov', require: false
+  gem 'coveralls', require: false
 end
 
 group :development, :test do
