@@ -38,12 +38,16 @@ ruby '2.3.0'
 group :test do
   gem 'simplecov', require: false
   gem 'coveralls', require: false
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'rspec'
+  gem 'launchy'
+
 end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
   gem 'sqlite3'
 
   gem 'cucumber-rails', :require => false
