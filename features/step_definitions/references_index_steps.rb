@@ -1,7 +1,7 @@
 When(/^User goes to the index reference page$/) do
-/
-  visit ""
-/
+
+  visit "/"
+
 end
 
 Then(/^Page contains line "([^"]*)" $/) do |line|
@@ -13,7 +13,3 @@ Given(/^I have articles titled "([^"]*)"$/) do |titles|
     Reference.create(:title => title)
   end
 end
-
-
-
-
