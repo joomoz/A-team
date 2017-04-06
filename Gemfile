@@ -39,12 +39,14 @@ gem 'coveralls', require: false
 
 group :test do
   gem 'simplecov', require: false
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
   gem 'sqlite3'
 
   gem 'cucumber-rails', :require => false

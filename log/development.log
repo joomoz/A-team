@@ -1479,3 +1479,35 @@ Processing by ReferencesController#index as HTML
   [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references"
   Rendered references/index.html.erb within layouts/application (9.4ms)
 Completed 200 OK in 181ms (Views: 173.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-06 10:36:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.4ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (40.6ms)
+Completed 500 Internal Server Error in 716ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Input/output error @ utime_internal - /cs/home/pesjoona/harjoitustyot/A-team/tmp/cache/assets/sprockets/v3.0/DS/DSOLSc6A5RVSmvM415eEWAWG_AgOvZcLZOXQjsXyWQA.cache):
+    2: <html>
+    3: <head>
+    4:   <title>BibTexGenerator</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__334319905933738788_70263252353480'
+
+
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.6ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1260.2ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1339.4ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/pesjoona/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2931.3ms)

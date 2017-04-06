@@ -1,25 +1,19 @@
 Given(/^User goes to new reference page$/) do
-  visit references_new
+  /
+  visit(new_reference_path)
+/
 end
 
-Given(/^User fills Key: M17$/) do
-  fill_in('Key', with:'M17')
+Given(/^User fills Key "([^"]*)"$/) do |key|
+  key
 end
 
-Given(/^User fills Entry type: article$/) do
-  fill_in('Entry type', with:'article')
+When(/^User clicks Create Reference$/) do
 end
 
-Given(/^ User fills Author: Moilanen J.$/) do
-  fill_in('Author', with:'Moilanen J.')
+Then(/^Page contains line "([^"]*)"$/) do |line|
+  line
 end
 
-When(/^User clicks Create Reference"$/) do
-  expect{
-    click_button('Create Reference')
-  }.to change{Reference.count}.by(1)
-end
-
-Then(/^Page confirms it"$/) do
-  expect(page).to have_content("Listing References")
+Then(/^amount of articles has increased by one$/) do
 end
