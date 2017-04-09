@@ -1,7 +1,5 @@
 When(/^User goes to the index reference page$/) do
-
   visit "/"
-
 end
 
 Then(/^Page contains line "([^"]*)" $/) do |line|

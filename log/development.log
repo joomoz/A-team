@@ -1559,3 +1559,5 @@ Processing by ReferencesController#index as HTML
   Rendered references/index.html.erb within layouts/application (15.3ms)
 Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.7ms)
 >>>>>>> be6f9c142e7f904eaeb3cabee6a90e4bfacd0841
+  [1m[36mReference Load (0.9ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "references"

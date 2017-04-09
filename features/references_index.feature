@@ -9,7 +9,6 @@ Feature: As a user I want to be able to list the references in a human-friendly 
     When User goes to the index reference page
     Then Page contains line "HelloWorld"
 
-
   Scenario: User can see multiple references on references index page
     Given I have articles titled "HelloYou, HellowWorld"
     When User goes to the index reference page
