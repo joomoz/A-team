@@ -40,7 +40,6 @@ group :test do
   gem 'coveralls', require: false
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'rspec'
   gem 'launchy'
 
 end
@@ -53,6 +52,7 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :production do
