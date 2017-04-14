@@ -10,13 +10,16 @@
       </ul>
     </div>
   <% end %>
+
+  <h1>New <%= @entry_type %></h1>
+  <strong>An article from a journal or magazine</strong>
+  <%= f.hidden_field :entry_type, :value => @entry_type %>
+
+  <h3>Required fields</h3>
+
   <div class="field">
     <%= f.label :key %><br>
     <%= f.text_field :key %>
-  </div>
-  <div class="field">
-    <%= f.label :entry_type %><br>
-    <%= f.select :entry_type, options_for_select(@entry_type) %>
   </div>
   <div class="field">
     <%= f.label :author %><br>
@@ -38,6 +41,8 @@
     <%= f.label :volume %><br>
     <%= f.number_field :volume %>
   </div>
+
+  <h3>Optional fields</h3>
   <div class="field">
     <%= f.label :number %><br>
     <%= f.number_field :number %>
@@ -53,35 +58,8 @@
   <div class="field">
     <%= f.label :note %><br>
     <%= f.text_area :note %>
-</div><!--
-  <div class="field">
-    <%= f.label :publisher %><br>
-    <%= f.text_area :publisher %>
   </div>
-  <div class="field">
-    <%= f.label :series %><br>
-    <%= f.text_area :series %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
-  </div>
-  <div class="field">
-    <%= f.label :edition %><br>
-    <%= f.text_area :edition %>
-  </div>
-  <div class="field">
-    <%= f.label :booktitle %><br>
-    <%= f.text_area :booktitle %>
-  </div>
-  <div class="field">
-    <%= f.label :editor %><br>
-    <%= f.text_area :editor %>
-  </div>
-  <div class="field">
-    <%= f.label :organization %><br>
-    <%= f.text_area :organization %>
-</div>-->
+
   <div class="actions">
     <%= f.submit %>
   </div>

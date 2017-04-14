@@ -18,6 +18,12 @@ class ReferencesController < ApplicationController
     @reference = Reference.new
   end
 
+  # GET /references/new_article
+  def new_article
+    @reference = Reference.new
+    @entry_type = "article"
+  end
+
   # GET /references/1/edit
   def edit
   end
@@ -70,7 +76,9 @@ class ReferencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reference_params
-      params.require(:reference).permit(:key, :entry_type, :author, :title, :journal, :year, :volume, :number, :pages, :month, :note, :publisher, :series, :address, :edition, :booktitle, :editor, :organization)
+      params.require(:reference).permit(:key, :entry_type, :author, :title, :journal,
+      :year, :volume, :number, :pages, :month, :note, :publisher, :series, :address, :edition,
+      :booktitle, :editor, :organization)
     end
 
     def set_entry_types_for_template
