@@ -1,22 +1,23 @@
-<%= form_for(@reference) do |f| %>
-  <% if @reference.errors.any? %>
+<%= form_for(@inproceeding) do |f| %>
+  <% if @inproceeding.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@reference.errors.count, "error") %> prohibited this reference from being saved:</h2>
+      <h2><%= pluralize(@inproceeding.errors.count, "error") %> prohibited this inproceeding from being saved:</h2>
 
       <ul>
-      <% @reference.errors.full_messages.each do |message| %>
+      <% @inproceeding.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
+
+  <%= f.hidden_field :entry_type, :value => "inproceedings" %>
+
+  <h3>Required fields</h3>
+
   <div class="field">
     <%= f.label :key %><br>
     <%= f.text_field :key %>
-  </div>
-  <div class="field">
-    <%= f.label :entry_type %><br>
-    <%= f.select :entry_type, options_for_select(@entry_type) %>
   </div>
   <div class="field">
     <%= f.label :author %><br>
@@ -27,12 +28,19 @@
     <%= f.text_area :title %>
   </div>
   <div class="field">
-    <%= f.label :journal %><br>
-    <%= f.text_area :journal %>
+    <%= f.label :booktitle %><br>
+    <%= f.text_area :booktitle %>
   </div>
   <div class="field">
     <%= f.label :year %><br>
     <%= f.number_field :year %>
+  </div>
+
+  <h3>Optional fields</h3>
+
+  <div class="field">
+    <%= f.label :editor %><br>
+    <%= f.text_area :editor %>
   </div>
   <div class="field">
     <%= f.label :volume %><br>
@@ -43,45 +51,34 @@
     <%= f.number_field :number %>
   </div>
   <div class="field">
-    <%= f.label :pages %><br>
-    <%= f.text_field :pages %>
-  </div>
-  <div class="field">
-    <%= f.label :month %><br>
-    <%= f.number_field :month %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_area :note %>
-  </div>
-  <div class="field">
-    <%= f.label :publisher %><br>
-    <%= f.text_area :publisher %>
-  </div>
-  <div class="field">
     <%= f.label :series %><br>
     <%= f.text_area :series %>
+  </div>
+  <div class="field">
+    <%= f.label :pages %><br>
+    <%= f.text_field :pages %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
     <%= f.text_area :address %>
   </div>
   <div class="field">
-    <%= f.label :edition %><br>
-    <%= f.text_area :edition %>
-  </div>
-  <div class="field">
-    <%= f.label :booktitle %><br>
-    <%= f.text_area :booktitle %>
-  </div>
-  <div class="field">
-    <%= f.label :editor %><br>
-    <%= f.text_area :editor %>
+    <%= f.label :month %><br>
+    <%= f.number_field :month %>
   </div>
   <div class="field">
     <%= f.label :organization %><br>
     <%= f.text_area :organization %>
-</div>
+  </div>
+  <div class="field">
+    <%= f.label :publisher %><br>
+    <%= f.text_area :publisher %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_area :note %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

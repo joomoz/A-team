@@ -19,10 +19,10 @@ class ReferencesController < ApplicationController
   end
 
   # GET /references/new_article
-  def new_article
-    @reference = Reference.new
-    @entry_type = "article"
-  end
+  # def new_article
+  #   @reference = Reference.new
+  #   @entry_type = "article"
+  # end
 
   # GET /references/1/edit
   def edit
@@ -36,10 +36,8 @@ class ReferencesController < ApplicationController
     respond_to do |format|
       if @reference.save
         format.html { redirect_to @reference, notice: 'Reference was successfully created.' }
-        format.json { render :show, status: :created, location: @reference }
       else
         format.html { render :new }
-        format.json { render json: @reference.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -63,7 +61,7 @@ class ReferencesController < ApplicationController
   def destroy
     @reference.destroy
     respond_to do |format|
-      format.html { redirect_to references_url, notice: 'Reference was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Reference was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
