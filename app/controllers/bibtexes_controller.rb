@@ -7,13 +7,14 @@ class BibtexesController < ApplicationController
   end
 
   def create
-    myfile = File.new(bibtex_params[:name] + ".bib", "w")
+    myfile = File.new("#{Rails.root}/tmp/"+ bibtex_params[:name] + ".bib", "w")
     Reference.all.each do |r|
       myfile.write r.to_s
     end
     myfile.close
     send_file(
-        bibtex_params[:name] + ".bib"
+        "#{Rails.root}/tmp/"+ bibtex_params[:name] + ".bib",
+
     )
   end
 
