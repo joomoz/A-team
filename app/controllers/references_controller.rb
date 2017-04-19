@@ -56,6 +56,8 @@ class ReferencesController < ApplicationController
     end
   end
 
+
+
   # DELETE /references/1
   # DELETE /references/1.json
   def destroy
@@ -65,6 +67,29 @@ class ReferencesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def bibtex
+    redirect_to "#{Rails.root}/app/views/references/download_bibtex.erb"
+  end
+
+  def download
+    generate
+    send_file(
+        "#{Rails.root}/public/sigproc.bib",
+        :disposition => 'attachment',
+        :x_sendfile=>true
+    )
+  end
+
+  def generate
+    myfile = File.open("#{Rails.root}/public/sigproc.bib", "w")
+    Reference.all.each do |r|
+      myfile.write r.to_s
+    end
+    myfile.close
+  end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

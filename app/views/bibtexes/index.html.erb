@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bibtexes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bibtexes.each do |bibtex| %>
+      <tr>
+        <td><%= bibtex.name %></td>
+        <td><%= link_to 'Show', bibtex %></td>
+        <td><%= link_to 'Edit', edit_bibtex_path(bibtex) %></td>
+        <td><%= link_to 'Destroy', bibtex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bibtex', new_bibtex_path %>

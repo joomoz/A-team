@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :bibtexes
   resources :inproceedings
   resources :books
   resources :articles
   resources :references
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
