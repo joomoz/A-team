@@ -14,3 +14,9 @@ Feature: As a user I want to be able to list the references in a human-friendly 
     When User goes to the index reference page
     Then Page contains line "HelloYou"
     And Page contains line "HellowWorld"
+
+    Scenario: User can delete entries
+        Given I have references titled "HelloYou, HelloWorld"
+        When User goes to the index reference page
+        And Clicks "Destroy" reference titled "HelloYou"
+        Then Page does not contain line "HelloYou"
