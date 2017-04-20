@@ -1,5 +1,5 @@
 class Reference < ActiveRecord::Base
-  validates :key, :author, :title, :year, presence: true
+  validates :key, :title, :year, presence: true
 
   def to_s
     "@#{entry_type}{#{key},
