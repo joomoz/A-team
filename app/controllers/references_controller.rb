@@ -101,7 +101,7 @@ class ReferencesController < ApplicationController
     def reference_params
       params.require(:reference).permit(:key, :entry_type, :author, :title, :journal,
       :year, :volume, :number, :pages, :month, :note, :publisher, :series, :address, :edition,
-      :booktitle, :editor, :organization)
+      :booktitle, :editor, :organization, :annote, :chapter, :crossref, :howpublished, :institution, :school, :type)
     end
 
     def set_entry_types_for_template

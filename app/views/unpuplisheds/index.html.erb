@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Unpuplisheds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Journal</th>
+      <th>Year</th>
+      <th>Volume</th>
+      <th>Number</th>
+      <th>Pages</th>
+      <th>Month</th>
+      <th>Note</th>
+      <th>Publisher</th>
+      <th>Series</th>
+      <th>Address</th>
+      <th>Edition</th>
+      <th>Booktitle</th>
+      <th>Editor</th>
+      <th>Organization</th>
+      <th>Entry type</th>
+      <th>Annote</th>
+      <th>Chapter</th>
+      <th>Crossref</th>
+      <th>Howpublished</th>
+      <th>Institution</th>
+      <th>School</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unpuplisheds.each do |unpuplished| %>
+      <tr>
+        <td><%= unpuplished.key %></td>
+        <td><%= unpuplished.author %></td>
+        <td><%= unpuplished.title %></td>
+        <td><%= unpuplished.journal %></td>
+        <td><%= unpuplished.year %></td>
+        <td><%= unpuplished.volume %></td>
+        <td><%= unpuplished.number %></td>
+        <td><%= unpuplished.pages %></td>
+        <td><%= unpuplished.month %></td>
+        <td><%= unpuplished.note %></td>
+        <td><%= unpuplished.publisher %></td>
+        <td><%= unpuplished.series %></td>
+        <td><%= unpuplished.address %></td>
+        <td><%= unpuplished.edition %></td>
+        <td><%= unpuplished.booktitle %></td>
+        <td><%= unpuplished.editor %></td>
+        <td><%= unpuplished.organization %></td>
+        <td><%= unpuplished.entry_type %></td>
+        <td><%= unpuplished.annote %></td>
+        <td><%= unpuplished.chapter %></td>
+        <td><%= unpuplished.crossref %></td>
+        <td><%= unpuplished.howpublished %></td>
+        <td><%= unpuplished.institution %></td>
+        <td><%= unpuplished.school %></td>
+        <td><%= unpuplished.type %></td>
+        <td><%= link_to 'Show', unpuplished %></td>
+        <td><%= link_to 'Edit', edit_unpuplished_path(unpuplished) %></td>
+        <td><%= link_to 'Destroy', unpuplished, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unpuplished', new_unpuplished_path %>

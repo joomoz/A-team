@@ -1,0 +1,2 @@
+module MastersthesesHelper
+end

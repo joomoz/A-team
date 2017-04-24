@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :booklets
+  resources :conferences
+  resources :incollections
+  resources :manuals
+  resources :masterstheses
+  resources :miscs
+  resources :phdtheses
+  resources :proceedings
+  resources :techreports
+  resources :unpuplisheds
   resources :bibtexes
   resources :inproceedings
   resources :books

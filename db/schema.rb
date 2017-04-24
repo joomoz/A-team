@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419114456) do
+ActiveRecord::Schema.define(version: 20170424173127) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "key"
@@ -42,6 +42,36 @@ ActiveRecord::Schema.define(version: 20170419114456) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "booklets", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "books", force: :cascade do |t|
     t.string   "key"
     t.text     "author"
@@ -61,6 +91,66 @@ ActiveRecord::Schema.define(version: 20170419114456) do
     t.text     "editor"
     t.text     "organization"
     t.string   "entry_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "conferences", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "incollections", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
@@ -88,6 +178,156 @@ ActiveRecord::Schema.define(version: 20170419114456) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "manuals", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "masterstheses", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "miscs", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "phdtheses", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "proceedings", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "references", force: :cascade do |t|
     t.string   "key"
     t.text     "author"
@@ -109,6 +349,73 @@ ActiveRecord::Schema.define(version: 20170419114456) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+  end
+
+  create_table "techreports", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "unpuplisheds", force: :cascade do |t|
+    t.string   "key"
+    t.text     "author"
+    t.text     "title"
+    t.text     "journal"
+    t.integer  "year"
+    t.integer  "volume"
+    t.integer  "number"
+    t.string   "pages"
+    t.integer  "month"
+    t.text     "note"
+    t.text     "publisher"
+    t.text     "series"
+    t.text     "address"
+    t.text     "edition"
+    t.text     "booktitle"
+    t.text     "editor"
+    t.text     "organization"
+    t.string   "entry_type"
+    t.text     "annote"
+    t.text     "chapter"
+    t.text     "crossref"
+    t.text     "howpublished"
+    t.text     "institution"
+    t.text     "school"
+    t.text     "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
