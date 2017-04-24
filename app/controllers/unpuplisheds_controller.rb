@@ -19,6 +19,7 @@ class UnpuplishedsController < ApplicationController
 
   # GET /unpuplisheds/1/edit
   def edit
+    @entry_type = "unpublished"
   end
 
   # POST /unpuplisheds
@@ -28,11 +29,9 @@ class UnpuplishedsController < ApplicationController
 
     respond_to do |format|
       if @unpuplished.save
-        format.html { redirect_to @unpuplished, notice: 'Unpuplished was successfully created.' }
-        format.json { render :show, status: :created, location: @unpuplished }
+        format.html { redirect_to root_path, notice: 'Unpuplished was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @unpuplished.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class UnpuplishedsController < ApplicationController
     respond_to do |format|
       if @unpuplished.update(unpuplished_params)
         format.html { redirect_to @unpuplished, notice: 'Unpuplished was successfully updated.' }
-        format.json { render :show, status: :ok, location: @unpuplished }
       else
         format.html { render :edit }
-        format.json { render json: @unpuplished.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class UnpuplishedsController < ApplicationController
   def destroy
     @unpuplished.destroy
     respond_to do |format|
-      format.html { redirect_to unpuplisheds_url, notice: 'Unpuplished was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Unpuplished was successfully destroyed.' }
     end
   end
 

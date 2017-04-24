@@ -19,6 +19,7 @@ class ProceedingsController < ApplicationController
 
   # GET /proceedings/1/edit
   def edit
+    @entry_type = "proceedings"
   end
 
   # POST /proceedings
@@ -28,11 +29,9 @@ class ProceedingsController < ApplicationController
 
     respond_to do |format|
       if @proceeding.save
-        format.html { redirect_to @proceeding, notice: 'Proceeding was successfully created.' }
-        format.json { render :show, status: :created, location: @proceeding }
+        format.html { redirect_to root_path, notice: 'Proceeding was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @proceeding.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class ProceedingsController < ApplicationController
     respond_to do |format|
       if @proceeding.update(proceeding_params)
         format.html { redirect_to @proceeding, notice: 'Proceeding was successfully updated.' }
-        format.json { render :show, status: :ok, location: @proceeding }
       else
         format.html { render :edit }
-        format.json { render json: @proceeding.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class ProceedingsController < ApplicationController
   def destroy
     @proceeding.destroy
     respond_to do |format|
-      format.html { redirect_to proceedings_url, notice: 'Proceeding was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Proceeding was successfully destroyed.' }
     end
   end
 

@@ -19,6 +19,7 @@ class ConferencesController < ApplicationController
 
   # GET /conferences/1/edit
   def edit
+    @entry_type = "conference"
   end
 
   # POST /conferences
@@ -28,11 +29,9 @@ class ConferencesController < ApplicationController
 
     respond_to do |format|
       if @conference.save
-        format.html { redirect_to @conference, notice: 'Conference was successfully created.' }
-        format.json { render :show, status: :created, location: @conference }
+        format.html { redirect_to root_path, notice: 'Conference was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @conference.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class ConferencesController < ApplicationController
     respond_to do |format|
       if @conference.update(conference_params)
         format.html { redirect_to @conference, notice: 'Conference was successfully updated.' }
-        format.json { render :show, status: :ok, location: @conference }
       else
         format.html { render :edit }
-        format.json { render json: @conference.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class ConferencesController < ApplicationController
   def destroy
     @conference.destroy
     respond_to do |format|
-      format.html { redirect_to conferences_url, notice: 'Conference was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Conference was successfully destroyed.' }
     end
   end
 

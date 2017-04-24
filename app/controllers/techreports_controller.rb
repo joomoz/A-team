@@ -19,6 +19,7 @@ class TechreportsController < ApplicationController
 
   # GET /techreports/1/edit
   def edit
+    @entry_type = "techreport"
   end
 
   # POST /techreports
@@ -28,11 +29,9 @@ class TechreportsController < ApplicationController
 
     respond_to do |format|
       if @techreport.save
-        format.html { redirect_to @techreport, notice: 'Techreport was successfully created.' }
-        format.json { render :show, status: :created, location: @techreport }
+        format.html { redirect_to root_path, notice: 'Techreport was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @techreport.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class TechreportsController < ApplicationController
     respond_to do |format|
       if @techreport.update(techreport_params)
         format.html { redirect_to @techreport, notice: 'Techreport was successfully updated.' }
-        format.json { render :show, status: :ok, location: @techreport }
       else
         format.html { render :edit }
-        format.json { render json: @techreport.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class TechreportsController < ApplicationController
   def destroy
     @techreport.destroy
     respond_to do |format|
-      format.html { redirect_to techreports_url, notice: 'Techreport was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Techreport was successfully destroyed.' }
     end
   end
 

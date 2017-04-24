@@ -19,6 +19,7 @@ class MiscsController < ApplicationController
 
   # GET /miscs/1/edit
   def edit
+    @entry_type = "misc"
   end
 
   # POST /miscs
@@ -28,11 +29,9 @@ class MiscsController < ApplicationController
 
     respond_to do |format|
       if @misc.save
-        format.html { redirect_to @misc, notice: 'Misc was successfully created.' }
-        format.json { render :show, status: :created, location: @misc }
+        format.html { redirect_to root_path, notice: 'Misc was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @misc.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class MiscsController < ApplicationController
     respond_to do |format|
       if @misc.update(misc_params)
         format.html { redirect_to @misc, notice: 'Misc was successfully updated.' }
-        format.json { render :show, status: :ok, location: @misc }
       else
         format.html { render :edit }
-        format.json { render json: @misc.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class MiscsController < ApplicationController
   def destroy
     @misc.destroy
     respond_to do |format|
-      format.html { redirect_to miscs_url, notice: 'Misc was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Misc was successfully destroyed.' }
     end
   end
 

@@ -19,6 +19,7 @@ class PhdthesesController < ApplicationController
 
   # GET /phdtheses/1/edit
   def edit
+    @entry_type = "phdthesis"
   end
 
   # POST /phdtheses
@@ -28,11 +29,9 @@ class PhdthesesController < ApplicationController
 
     respond_to do |format|
       if @phdthesis.save
-        format.html { redirect_to @phdthesis, notice: 'Phdthesis was successfully created.' }
-        format.json { render :show, status: :created, location: @phdthesis }
+        format.html { redirect_to root_path, notice: 'Phdthesis was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @phdthesis.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,11 +41,9 @@ class PhdthesesController < ApplicationController
   def update
     respond_to do |format|
       if @phdthesis.update(phdthesis_params)
-        format.html { redirect_to @phdthesis, notice: 'Phdthesis was successfully updated.' }
-        format.json { render :show, status: :ok, location: @phdthesis }
+        format.html { redirect_to root_path, notice: 'Phdthesis was successfully updated.' }
       else
         format.html { render :edit }
-        format.json { render json: @phdthesis.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class PhdthesesController < ApplicationController
   def destroy
     @phdthesis.destroy
     respond_to do |format|
-      format.html { redirect_to phdtheses_url, notice: 'Phdthesis was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Phdthesis was successfully destroyed.' }
     end
   end
 

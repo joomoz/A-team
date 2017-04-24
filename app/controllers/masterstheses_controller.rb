@@ -19,6 +19,7 @@ class MastersthesesController < ApplicationController
 
   # GET /masterstheses/1/edit
   def edit
+    @entry_type = "mastersthesis"
   end
 
   # POST /masterstheses
@@ -28,11 +29,9 @@ class MastersthesesController < ApplicationController
 
     respond_to do |format|
       if @mastersthesis.save
-        format.html { redirect_to @mastersthesis, notice: 'Mastersthesis was successfully created.' }
-        format.json { render :show, status: :created, location: @mastersthesis }
+        format.html { redirect_to root_path, notice: 'Mastersthesis was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @mastersthesis.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class MastersthesesController < ApplicationController
     respond_to do |format|
       if @mastersthesis.update(mastersthesis_params)
         format.html { redirect_to @mastersthesis, notice: 'Mastersthesis was successfully updated.' }
-        format.json { render :show, status: :ok, location: @mastersthesis }
       else
         format.html { render :edit }
-        format.json { render json: @mastersthesis.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class MastersthesesController < ApplicationController
   def destroy
     @mastersthesis.destroy
     respond_to do |format|
-      format.html { redirect_to masterstheses_url, notice: 'Mastersthesis was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Mastersthesis was successfully destroyed.' }
     end
   end
 

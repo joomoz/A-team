@@ -19,6 +19,7 @@ class BookletsController < ApplicationController
 
   # GET /booklets/1/edit
   def edit
+     @entry_type = "booklet"
   end
 
   # POST /booklets
@@ -28,12 +29,9 @@ class BookletsController < ApplicationController
 
     respond_to do |format|
       if @booklet.save
-        format.html { redirect_to @booklet, notice: 'Booklet was successfully created.' }
-        format.json { render :show, status: :created, location: @booklet }
-      else
-        format.html { render :new }
-        format.json { render json: @booklet.errors, status: :unprocessable_entity }
-      end
+        format.html { redirect_to root_path, notice: 'Booklet was successfully created.' }
+        else
+        format.html { render :new }end
     end
   end
 
@@ -43,10 +41,8 @@ class BookletsController < ApplicationController
     respond_to do |format|
       if @booklet.update(booklet_params)
         format.html { redirect_to @booklet, notice: 'Booklet was successfully updated.' }
-        format.json { render :show, status: :ok, location: @booklet }
       else
         format.html { render :edit }
-        format.json { render json: @booklet.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +52,7 @@ class BookletsController < ApplicationController
   def destroy
     @booklet.destroy
     respond_to do |format|
-      format.html { redirect_to booklets_url, notice: 'Booklet was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to root_path, notice: 'Booklet was successfully destroyed.' }
     end
   end
 

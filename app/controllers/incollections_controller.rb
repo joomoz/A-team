@@ -19,6 +19,7 @@ class IncollectionsController < ApplicationController
 
   # GET /incollections/1/edit
   def edit
+    @entry_type = "incollection"
   end
 
   # POST /incollections
@@ -28,11 +29,9 @@ class IncollectionsController < ApplicationController
 
     respond_to do |format|
       if @incollection.save
-        format.html { redirect_to @incollection, notice: 'Incollection was successfully created.' }
-        format.json { render :show, status: :created, location: @incollection }
+        format.html { redirect_to root_path, notice: 'Incollection was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @incollection.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class IncollectionsController < ApplicationController
     respond_to do |format|
       if @incollection.update(incollection_params)
         format.html { redirect_to @incollection, notice: 'Incollection was successfully updated.' }
-        format.json { render :show, status: :ok, location: @incollection }
       else
         format.html { render :edit }
-        format.json { render json: @incollection.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,7 +53,7 @@ class IncollectionsController < ApplicationController
   def destroy
     @incollection.destroy
     respond_to do |format|
-      format.html { redirect_to incollections_url, notice: 'Incollection was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Incollection was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
