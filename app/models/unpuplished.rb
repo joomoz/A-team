@@ -1,3 +1,3 @@
 class Unpuplished < Reference
-  validates :author, :titlte, :note, presence: true
+  validates :author, :title, :note, presence: true
 end
