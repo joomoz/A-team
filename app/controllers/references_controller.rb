@@ -105,7 +105,7 @@ class ReferencesController < ApplicationController
     end
 
     def set_entry_types_for_template
-      @entry_type = ["article", "book", "inproceedings"]
+      @entry_type = ["article", "book", "inproceedings", ""]
     end
 
 end
