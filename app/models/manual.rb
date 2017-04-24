@@ -1,2 +1,3 @@
-class Manual < ActiveRecord::Base
+class Manual < Reference
+  validates :title, presence: true
 end

@@ -1,2 +1,3 @@
-class Unpuplished < ActiveRecord::Base
+class Unpuplished < Reference
+  validates :author, :titlte, :note, presence: true
 end

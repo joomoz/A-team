@@ -1,2 +1,2 @@
-class Misc < ActiveRecord::Base
+class Misc < Reference
 end

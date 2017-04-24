@@ -1,2 +1,3 @@
-class Conference < ActiveRecord::Base
+class Conference < Reference
+  validates :title, :year, :author, :booktitle, presence: true
 end

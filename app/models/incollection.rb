@@ -1,2 +1,3 @@
-class Incollection < ActiveRecord::Base
+class Incollection < Reference
+  validates :title, :publisher, :year, :author, :booktitle, presence: true
 end

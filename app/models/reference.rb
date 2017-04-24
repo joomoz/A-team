@@ -1,5 +1,5 @@
 class Reference < ActiveRecord::Base
-  validates :key, :title, :year, presence: true
+  validates :key, presence: true
 
   def to_s
     "@#{entry_type}{#{key},
@@ -19,6 +19,13 @@ class Reference < ActiveRecord::Base
       note = {#{note}},
       edition = {#{edition}},
       series = {#{series}},
+      annote = {#{annote}},
+      chapter = {#{chapter}},
+      crossref = {#{crossref}},
+      howpublished = {#{howpublished}},
+      institution = {#{institution}},
+      school = {#{school}},
+      type = {#{type}},
 }
 "
 
