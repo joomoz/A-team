@@ -11,7 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+    <%= f.hidden_field :entry_type, :value => "booklet" %>
+
+    <h3>Required fields</h3>
+
+    <div class="field">
     <%= f.label :key %><br>
     <%= f.text_field :key %>
   </div>
