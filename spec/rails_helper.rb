@@ -4,8 +4,8 @@ SimpleCov.start('rails')
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 #SimpleCov.coverage_dir 'coverage/cucumber'
-#require 'coveralls'
-#Coveralls.wear!
+require 'coveralls'
+Coveralls.wear!
 #ENV['RAILS_ENV'] ||= 'test'
 
 # Prevent database truncation if the environment is production
