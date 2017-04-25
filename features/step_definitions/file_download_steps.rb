@@ -1,7 +1,6 @@
 When(/^User enters name "([^"]*)" and clicks "([^"]*)"$/) do |name, button|
   fill_in 'bibtex_name', :with => name
   form_action = find('#new_bibtex')['action']
-  #puts form_action
   click_on button
 end
 

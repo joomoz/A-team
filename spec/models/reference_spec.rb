@@ -19,5 +19,20 @@ RSpec.describe Reference, type: :model do
     expect(ref.volume).to eq(10)
   end
 
-  
+  it "is not saved without key" do
+    ref = Reference.new author:"Writer",  title:"Article", year:1990
+
+    expect(ref).not_to be_valid
+    expect(Reference.count).to eq(0)
+  end
+
+  it "gets key automatically if other necessary info is available" do
+    n = Reference.count
+    ref = Reference.new author:"Writer",  title:"Article", year:1990
+    ref.create_key
+
+    expect(ref).to be_valid
+  end
+
+
 end

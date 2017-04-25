@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Misc, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is valid wihtout limitations" do
+    ref = Reference.new key: "Keyyyy"
+
+    expect(ref).to be_valid
+  end
 end

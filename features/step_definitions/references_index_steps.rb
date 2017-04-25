@@ -22,7 +22,6 @@ end
 When(/^Clicks "([^"]*)" reference titled "([^"]*)"$/) do |link, title|
   visit "/"
   click_link(link, match: :first)
-  #click_on link
 end
 
 Then(/^Page does not contain line "([^"]*)"$/) do |line|
