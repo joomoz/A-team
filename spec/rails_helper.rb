@@ -1,11 +1,13 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'simplecov'
+require 'coveralls'
+
 SimpleCov.start('rails')
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 #SimpleCov.coverage_dir 'coverage/cucumber'
-require 'coveralls'
-Coveralls.wear!
+#require 'coveralls'
+Coveralls.wear_merged!
 #ENV['RAILS_ENV'] ||= 'test'
 
 # Prevent database truncation if the environment is production
