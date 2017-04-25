@@ -2,22 +2,22 @@ class Reference < ActiveRecord::Base
   validates :key, presence: true
 
   def create_key
-      key = self.author.partition(" ").first + self.year.to_s + self.title.partition(" ").first
-      references = Reference.all
-      abc = "abcdefghijklmnopqrstuvwxyz"
-      abcIndex = 0
-      while Reference.exists?(key: key)
-          if abcIndex > 0 && abcIndex < abc.length
-              key = key.chop
-          end
-          key = key + abc[abcIndex]
-          if abcIndex < abc.length
-              abcIndex = abcIndex + 1
-          else
-              abcIndex = 0
-          end
-      end
-      self.key = key
+    key = self.author.partition(" ").first + self.year.to_s + self.title.partition(" ").first
+    references = Reference.all
+    abc = "abcdefghijklmnopqrstuvwxyz"
+    abcIndex = 0
+    while Reference.exists?(key: key)
+        if abcIndex > 0 && abcIndex < abc.length
+            key = key.chop
+        end
+        key = key + abc[abcIndex]
+        if abcIndex < abc.length
+            abcIndex = abcIndex + 1
+        else
+            abcIndex = 0
+        end
+    end
+    self.key = key
   end
 
   def to_s
@@ -45,9 +45,7 @@ class Reference < ActiveRecord::Base
       institution = {#{institution}},
       school = {#{school}},
       type = {#{type}},
-}
-"
+      }"
 
-
-end
   end
+end
