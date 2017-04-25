@@ -2,7 +2,7 @@ class Reference < ActiveRecord::Base
   validates :key, presence: true
 
   def create_key
-      key = self.author + self.year.to_s + self.title
+      key = self.author.partition(" ").first + self.year.to_s + self.title.partition(" ").first
       references = Reference.all
       abc = "abcdefghijklmnopqrstuvwxyz"
       abcIndex = 0

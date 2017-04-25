@@ -10,5 +10,5 @@ When(/^Selects the download location the project root$/) do
 end
 
 Then(/^The project root contains a Bibtex file named "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  
 end
