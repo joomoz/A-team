@@ -26,6 +26,9 @@ class MastersthesesController < ApplicationController
   # POST /masterstheses.json
   def create
     @mastersthesis = Mastersthesis.new(mastersthesis_params)
+    if @mastersthesis.key.blank?
+        @mastersthesis.create_key
+    end
 
     respond_to do |format|
       if @mastersthesis.save

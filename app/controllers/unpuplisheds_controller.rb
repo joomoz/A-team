@@ -26,6 +26,9 @@ class UnpuplishedsController < ApplicationController
   # POST /unpuplisheds.json
   def create
     @unpuplished = Unpuplished.new(unpuplished_params)
+    if @unpuplished.key.blank?
+        @unpuplished.create_key
+    end
 
     respond_to do |format|
       if @unpuplished.save

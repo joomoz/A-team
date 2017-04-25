@@ -26,6 +26,9 @@ class ConferencesController < ApplicationController
   # POST /conferences.json
   def create
     @conference = Conference.new(conference_params)
+    if @conference.key.blank?
+        @conference.create_key
+    end
 
     respond_to do |format|
       if @conference.save

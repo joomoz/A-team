@@ -26,6 +26,9 @@ class IncollectionsController < ApplicationController
   # POST /incollections.json
   def create
     @incollection = Incollection.new(incollection_params)
+    if @incollection.key.blank?
+        @incollection.create_key
+    end
 
     respond_to do |format|
       if @incollection.save

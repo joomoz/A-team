@@ -26,6 +26,9 @@ class MiscsController < ApplicationController
   # POST /miscs.json
   def create
     @misc = Misc.new(misc_params)
+    if @misc.key.blank?
+        @misc.create_key
+    end
 
     respond_to do |format|
       if @misc.save

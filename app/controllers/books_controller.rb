@@ -26,6 +26,9 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
+    if @book.key.blank?
+        @book.create_key
+    end
 
     respond_to do |format|
       if @book.save

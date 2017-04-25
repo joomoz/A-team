@@ -26,7 +26,9 @@ class BookletsController < ApplicationController
   # POST /booklets.json
   def create
     @booklet = Booklet.new(booklet_params)
-
+    if @booklet.key.blank?
+        @booklet.create_key
+    end
     respond_to do |format|
       if @booklet.save
         format.html { redirect_to root_path, notice: 'Booklet was successfully created.' }

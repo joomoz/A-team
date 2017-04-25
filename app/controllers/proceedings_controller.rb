@@ -26,6 +26,9 @@ class ProceedingsController < ApplicationController
   # POST /proceedings.json
   def create
     @proceeding = Proceeding.new(proceeding_params)
+    if @proceeding.key.blank?
+        @proceeding.create_key
+    end
 
     respond_to do |format|
       if @proceeding.save

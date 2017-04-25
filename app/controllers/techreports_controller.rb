@@ -26,6 +26,9 @@ class TechreportsController < ApplicationController
   # POST /techreports.json
   def create
     @techreport = Techreport.new(techreport_params)
+    if @techreport.key.blank?
+        @techreport.create_key
+    end
 
     respond_to do |format|
       if @techreport.save

@@ -26,6 +26,9 @@ class ManualsController < ApplicationController
   # POST /manuals.json
   def create
     @manual = Manual.new(manual_params)
+    if @manual.key.blank?
+        @manual.create_key
+    end
 
     respond_to do |format|
       if @manual.save
