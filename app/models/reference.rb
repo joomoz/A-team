@@ -1,5 +1,4 @@
 class Reference < ActiveRecord::Base
-  validates :key, presence: true
 
   def create_key
     key = self.author.partition(" ").first + self.year.to_s + self.title.partition(" ").first
@@ -45,7 +44,8 @@ class Reference < ActiveRecord::Base
       institution = {#{institution}},
       school = {#{school}},
       type = {#{type}},
-      }"
+}
+"
 
   end
 end
