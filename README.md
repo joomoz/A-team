@@ -4,8 +4,8 @@ Ohtu miniprojekti
 * Product backlog: https://docs.google.com/spreadsheets/d/1upYk-d4MAbZPeJqbJHjETY1mTNNoHeiHZTzzObeEKtY/edit?usp=sharing
 
 
-Sovelluksen käynnistämis ohjeet:
-Sovellus löytyy osoitteesta https://ateam-bibtex-generator.herokuapp.com/ .
+*Sovelluksen käynnistämis ohjeet*
+Sovellus löytyy osoitteesta https://ateam-bibtex-generator.herokuapp.com/
 
 
 [![Build Status](https://travis-ci.org/joomoz/A-team.svg?branch=master)](https://travis-ci.org/joomoz/A-team)
