@@ -19,33 +19,15 @@ class Reference < ActiveRecord::Base
     self.key = key
   end
 
-  def to_s
-    "@#{entry_type}{#{key},
-      author = {#{author}},
-      title = {#{title}},
-      journal = {#{journal}},
-      volume = {#{volume}},
-      number = {#{number}},
-      month = {#{month}},
-      year = {#{year}},
-      pages = {#{pages}},
-      publisher = {#{publisher}},
-      editor = {#{editor}},
-      booktitle = {#{booktitle}},
-      organization = {#{organization}},
-      address = {#{address}},
-      note = {#{note}},
-      edition = {#{edition}},
-      series = {#{series}},
-      annote = {#{annote}},
-      chapter = {#{chapter}},
-      crossref = {#{crossref}},
-      howpublished = {#{howpublished}},
-      institution = {#{institution}},
-      school = {#{school}},
-      type = {#{type}},
-}
-"
+  def serialized_fields
+    [:author, :title, :journal, :volume, :number, :month, :year, :pages, :publisher, :editor, :booktitle, :organization, :address, :note, :edition, :series, :annote, :chapter, :crossref, :howpublished, :institution, :school, :type] 
+  end
 
+  def to_s
+    str = "@#{entry_type}{#{key},\n"
+    serialized_fields.each do |field|
+      str += "      #{field.to_s} = {#{self[field]}},\n" # unless self[field].blank?
+    end
+    str += "}\n"
   end
 end
