@@ -26,7 +26,7 @@ class Reference < ActiveRecord::Base
   def to_s
     str = "@#{entry_type}{#{key},\n"
     serialized_fields.each do |field|
-      str += "      #{field.to_s} = {#{self[field]}},\n" # unless self[field].blank?
+      str += "      #{field.to_s} = {#{self[field]}},\n" unless self[field].blank?
     end
     str += "}\n"
   end
