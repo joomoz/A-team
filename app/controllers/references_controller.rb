@@ -2,7 +2,7 @@ class ReferencesController < ApplicationController
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
 
   def index
-    @references = Reference.all
+    @references = Reference.paginate(:page => params[:page], :per_page => 20)
   end
 
   def show

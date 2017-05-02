@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Ruby version
 ruby '2.3.0'
 
+gem 'will_paginate', '~> 3.1.0'
+
 group :test do
   gem 'simplecov', require: false
   gem 'coveralls', require: false
