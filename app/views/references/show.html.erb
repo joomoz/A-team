@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <strong>Entry type:</strong>
-  <%= @reference.entry_type %>
-</p>
-
-<p>
   <strong>Author:</strong>
   <%= @reference.author %>
 </p>
@@ -90,5 +85,40 @@
   <%= @reference.organization %>
 </p>
 
-<!-- <%= link_to 'Edit', edit_reference_path(@reference) %> | -->
+<p>
+  <strong>Entry type:</strong>
+  <%= @reference.entry_type %>
+</p>
+
+<p>
+  <strong>Annote:</strong>
+  <%= @reference.annote %>
+</p>
+
+<p>
+  <strong>Chapter:</strong>
+  <%= @reference.chapter %>
+</p>
+
+<p>
+  <strong>Crossref:</strong>
+  <%= @reference.crossref %>
+</p>
+
+<p>
+  <strong>Howpublished:</strong>
+  <%= @reference.howpublished %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @reference.institution %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @reference.school %>
+</p>
+
+
 <%= link_to 'Back', references_path %>
