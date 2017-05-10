@@ -12,6 +12,8 @@ Neljänteen sprinttiin jäi tavoitteeksi sivutuksen toteuttaminen, sekä koodin 
 ## Lessons learned
 Jälkeenpäin ajateltuna Ruby on Railsin valitseminen alustaksi ei ehkä ollut paras valinta. Uuden opetteluun meni runsaasti aikaa, joka oli jo valmiiksi kortilla pienessä projektissa. Näin pienessä projektissa parempi lähestymistapa olisi todennäköisesti ollutkin valita joku ehkä hieman kömpelömpi menetelmä, mutta jonka kaikki olisivat tunteneet ennestään. Isommassa projektissa käyttämämme taktiikka olisi todennäköisesti ollut kannattavampi. Pidemmällä aikavälillä uuden oppimiseen käytetty aika olisi alkanut hävitä tekniikasta saataville hyödyille. Näin lyhyessä ajassa tätä vaihdosta ei kuitenkaan päässyt tapahtumaan.
 
+Pidemmässä projektissa esim. pariohjelmointi olisi varmasti toiminut vastaavassa tilanteessa hienosti, kun puolet tiimistä hallitsee tekniikan ja puolet ei. Näin lyhyellä ajalla pariohjelmointi valitettavasti syö työtunnit todella nopeasti.
+
 Jatkoa ajatellan tämä olikin hyvä oppintunti siitä, mitä kaikkea pitää ottaa huomioon työkalujen valinnassa, kun lähtee toteuttamaan uutta projektia. Työstimme projektia vain pari kertaa fyysisesti samassa paikassa yhtä aikaa. Miniprojekti osoittikin hyvin myös osaltaan sen, että vaikka pikaviestimien avulla muiden kanssa voi olla aina yhteydessä, niin tällaiset välineet eivät voi korvata fyysistä yhteistyötä.
 
 ## Mitä olisi haluttu oppia, mikä oli turhaa?
