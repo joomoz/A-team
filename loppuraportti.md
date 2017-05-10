@@ -15,4 +15,10 @@ Jälkeenpäin ajateltuna Ruby on Railsin valitseminen alustaksi ei ehkä ollut p
 Jatkoa ajatellan tämä olikin hyvä oppintunti siitä, mitä kaikkea pitää ottaa huomioon työkalujen valinnassa, kun lähtee toteuttamaan uutta projektia. Työstimme projektia vain pari kertaa fyysisesti samassa paikassa yhtä aikaa. Miniprojekti osoittikin hyvin myös osaltaan sen, että vaikka pikaviestimien avulla muiden kanssa voi olla aina yhteydessä, niin tällaiset välineet eivät voi korvata fyysistä yhteistyötä.
 
 ## Mitä olisi haluttu oppia, mikä oli turhaa?
-Miniprojektissa olisi ehkä voitu tiukemmin keskittyä scrumin toteuttamisen opetteluun. Itse projekti olisi voinut olla koodauksen ja rakenteen kannalta tarkemmin strukturoitu, jotta scrumin käyttöön ja ryhmätyöhön olisi jäänyt enemmän aikaa ja huomiota.
+Miniprojektissa olisi voitu tiukemmin keskittyä scrumin toteuttamisen opetteluun. Itse projekti olisi voinut olla koodauksen ja rakenteen kannalta tarkemmin strukturoitu, jotta scrumin käyttöön ja ryhmätyöhön olisi jäänyt enemmän aikaa ja huomiota.
+
+## Ryhmä
+Mikko Tiainen
+Joona Pesonen
+Joonas Moilanen 
+Eero Pukkila
